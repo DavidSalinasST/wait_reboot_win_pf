@@ -1,0 +1,19 @@
+---
+vcenter_hostname: "10.5.40.15"
+vcenter_datacenter: "DC-ST-Lab"
+vcenter_validate_certs: false
+vcenter_username: "dsalinas@vsphere.local"
+vcenter_password: "Prueba.2023!"
+vm_name: "myvm3win"
+vm_template: "test-win-pcf"
+vm_guestid: "windows2019srv_64Guest"
+vm_disk_gb: 100
+vm_disk_type: "thin"
+vm_disk_datastore: "ST-Mac-Iver-Datastore-02"
+vm_hw_ram_mb: 8192
+vm_hw_cpu_n: 2
+vm_hw_scsi: "paravirtual"
+vm_net_name: "VM Network"
+vm_net_type: "vmxnet3"
+vcenter_destination_folder: "myvm1"
+vm_state: "present"
