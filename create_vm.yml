@@ -1,6 +1,7 @@
 ---
 - name: Manage Windows
   hosts: win
+  become: false
   tasks:
   - name: Create directory structure
     win_file:
