@@ -1,0 +1,15 @@
+---
+- name: Run PowerShell script with parameters
+  ansible.windows.win_powershell:
+    script: |
+      [CmdletBinding()]
+      param (
+          [String]
+          $Path,
+          [Switch]
+          $Force
+      )
+      New-Item -Path $Path -ItemType Directory -Force:$Force
+    parameters:
+      Path: C:\temporal
+      Force: true
