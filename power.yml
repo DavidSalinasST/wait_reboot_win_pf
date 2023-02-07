@@ -7,7 +7,7 @@
     wait_for:
       port: 5986
       delay: 10
-    connection: local  
+    ignore_errors: yes  
   - name: Run multi-lined shell commands
     win_shell: |
       $value = Test-Path -Path C:\temporal
