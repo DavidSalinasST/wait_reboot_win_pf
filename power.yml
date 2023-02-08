@@ -1,19 +1,9 @@
 ---
 - name: Manage Windows
-  hosts: win
+  hosts: localhost
   become: false
-  tasks:
-  - name: Pause for 1 minutes to build app cache
+  gather_facts: false
+   tasks:
+  - name: Wait for reboot 
     pause:
-      minutes: 1
-  - name: Run multi-lined shell commands
-    win_shell: |
-      $value = Test-Path -Path C:\temporal
-      if ($value) {
-          Remove-Item -Path C:\temporal -Force
-      }
-      New-Item -Path C:\temporal -ItemType Directory
-  - name: Copy file    
-    win_copy:
-      src: ConfigureRemotingForAnsible.ps1
-      dest: C:\temporal\
+      minutes: 5
